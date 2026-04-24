@@ -1,0 +1,226 @@
+[
+  {
+    "id": "5b419f85-4dff-40f0-9dcc-ec08cfc2840d",
+    "name": "Maintenance",
+    "subjectCode": "483",
+    "degreeItems": [
+      {
+        "id": "26e816a8-58c8-41fe-a321-b106fd15aa01",
+        "label": "Quiz",
+        "code": "1097",
+        "isFinal": false
+      },
+      {
+        "id": "3c7ef564-c967-44c6-b942-4708f02cce2e",
+        "label": "Mid term",
+        "code": "1098",
+        "isFinal": false
+      },
+      {
+        "id": "cba0569a-eed2-49e2-8fe6-65947d4ded74",
+        "label": "LAB",
+        "code": "1099",
+        "isFinal": false
+      },
+      {
+        "id": "eb0a74b4-04a5-486c-b63f-3c73d71cba1e",
+        "label": "Lab Final Exam",
+        "code": "1101",
+        "isFinal": true
+      },
+      {
+        "id": "5c551c88-cdd4-4dc5-81c8-b8b3ea56ad59",
+        "label": "Final Course Project",
+        "code": "1100",
+        "isFinal": false
+      }
+    ],
+    "metadata": {
+      "academicYearCode": "2025",
+      "semesterCode": "5",
+      "branchCode": "1",
+      "facultyCode": "2",
+      "sectionCode": "3"
+    },
+    "apiUrl": "https://api.seu.edu.eg/api/StudentSubjectDegrees/StudentSubjectDegrees1",
+    "updatedAt": "2026-04-23T22:40:22.685Z"
+  },
+  {
+    "id": "cd30aed5-319e-4cf0-bdae-edfe43ad46b7",
+    "name": "Logic Design",
+    "subjectCode": "395",
+    "degreeItems": [
+      {
+        "id": "26e816a8-58c8-41fe-a321-b106fd15aa01",
+        "label": "Quiz",
+        "code": "1078",
+        "isFinal": false
+      },
+      {
+        "id": "3c7ef564-c967-44c6-b942-4708f02cce2e",
+        "label": "Mid term",
+        "code": "1079",
+        "isFinal": false
+      },
+      {
+        "id": "cba0569a-eed2-49e2-8fe6-65947d4ded74",
+        "label": "LAB",
+        "code": "1081",
+        "isFinal": false
+      },
+      {
+        "id": "eb0a74b4-04a5-486c-b63f-3c73d71cba1e",
+        "label": "Final exam",
+        "code": "1080",
+        "isFinal": true
+      }
+    ],
+    "metadata": {
+      "academicYearCode": "2025",
+      "semesterCode": "5",
+      "branchCode": "1",
+      "facultyCode": "2",
+      "sectionCode": "3"
+    },
+    "apiUrl": "https://api.seu.edu.eg/api/StudentSubjectDegrees/StudentSubjectDegrees1",
+    "updatedAt": "2026-04-23T22:38:22.883Z"
+  },
+  {
+    "id": "e516da8c-5737-4d31-848b-fff387d28116",
+    "name": "Networks and Communications Technologies",
+    "subjectCode": "111",
+    "degreeItems": [
+      {
+        "id": "26e816a8-58c8-41fe-a321-b106fd15aa01",
+        "label": "Quiz",
+        "code": "1136",
+        "isFinal": false
+      },
+      {
+        "id": "3c7ef564-c967-44c6-b942-4708f02cce2e",
+        "label": "Mid term",
+        "code": "1137",
+        "isFinal": false
+      },
+      {
+        "id": "cba0569a-eed2-49e2-8fe6-65947d4ded74",
+        "label": "LAB",
+        "code": "1138",
+        "isFinal": false
+      },
+      {
+        "id": "eb0a74b4-04a5-486c-b63f-3c73d71cba1e",
+        "label": "Lab Final Exam",
+        "code": "1140",
+        "isFinal": true
+      },
+      {
+        "id": "458ed1f6-dba7-436e-a458-a906a364a60d",
+        "label": "Final Course Project",
+        "code": "1139",
+        "isFinal": false
+      }
+    ],
+    "metadata": {
+      "academicYearCode": "2025",
+      "semesterCode": "5",
+      "branchCode": "1",
+      "facultyCode": "2",
+      "sectionCode": "3"
+    },
+    "apiUrl": "https://api.seu.edu.eg/api/StudentSubjectDegrees/StudentSubjectDegrees1",
+    "updatedAt": "2026-04-23T22:35:32.250Z"
+  },
+  {
+    "id": "7fd897a7-6a4b-425f-81c2-447bff56daca",
+    "name": "Programming Language 1",
+    "subjectCode": "108",
+    "degreeItems": [
+      {
+        "id": "26e816a8-58c8-41fe-a321-b106fd15aa01",
+        "label": "Quiz",
+        "code": "1141",
+        "isFinal": false
+      },
+      {
+        "id": "3c7ef564-c967-44c6-b942-4708f02cce2e",
+        "label": "Mid term",
+        "code": "1142",
+        "isFinal": false
+      },
+      {
+        "id": "cba0569a-eed2-49e2-8fe6-65947d4ded74",
+        "label": "LAB",
+        "code": "1143",
+        "isFinal": false
+      },
+      {
+        "id": "eb0a74b4-04a5-486c-b63f-3c73d71cba1e",
+        "label": "Lab Final Exam",
+        "code": "1145",
+        "isFinal": true
+      },
+      {
+        "id": "458ed1f6-dba7-436e-a458-a906a364a60d",
+        "label": "Final Course Project",
+        "code": "1144",
+        "isFinal": false
+      }
+    ],
+    "metadata": {
+      "academicYearCode": "2025",
+      "semesterCode": "5",
+      "branchCode": "1",
+      "facultyCode": "2",
+      "sectionCode": "3"
+    },
+    "apiUrl": "https://api.seu.edu.eg/api/StudentSubjectDegrees/StudentSubjectDegrees1",
+    "updatedAt": "2026-04-23T22:30:25.618Z"
+  },
+  {
+    "id": "2d84dfb0-d3ac-4a17-a14a-8cdb289cf160",
+    "name": "Information Tecnhnology",
+    "subjectCode": "117",
+    "degreeItems": [
+      {
+        "id": "26e816a8-58c8-41fe-a321-b106fd15aa01",
+        "label": "Quiz",
+        "code": "1102",
+        "isFinal": false
+      },
+      {
+        "id": "3c7ef564-c967-44c6-b942-4708f02cce2e",
+        "label": "Mid term",
+        "code": "1103",
+        "isFinal": false
+      },
+      {
+        "id": "cba0569a-eed2-49e2-8fe6-65947d4ded74",
+        "label": "LAB",
+        "code": "1104",
+        "isFinal": false
+      },
+      {
+        "id": "eb0a74b4-04a5-486c-b63f-3c73d71cba1e",
+        "label": "Lab Final Exam",
+        "code": "1106",
+        "isFinal": true
+      },
+      {
+        "id": "458ed1f6-dba7-436e-a458-a906a364a60d",
+        "label": "Final Course Project",
+        "code": "1105",
+        "isFinal": false
+      }
+    ],
+    "metadata": {
+      "academicYearCode": "2025",
+      "semesterCode": "5",
+      "branchCode": "1",
+      "facultyCode": "2",
+      "sectionCode": "3"
+    },
+    "apiUrl": "https://api.seu.edu.eg/api/StudentSubjectDegrees/StudentSubjectDegrees1",
+    "updatedAt": "2026-04-23T22:23:13.456Z"
+  }
+]

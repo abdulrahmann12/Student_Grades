@@ -1,0 +1,3152 @@
+{
+  "studentSubjectDegreeAdd": {
+    "academicYearCode": 2025,
+    "semesterCode": 5,
+    "branchCode": 1,
+    "facultyCode": 2,
+    "sectionCode": 3,
+    "studentCode": null,
+    "lang": "ar",
+    "orderBy": 1,
+    "committeDegree": 0,
+    "secondLangCode": 0,
+    "subjectCode": 117
+  },
+  "studentSubjectDegreeMain": [
+    {
+      "studentCode": 2025002937,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 2,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002750,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 10,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002445,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 15,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001214,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 15,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025000248,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 7,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025000977,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 12,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001348,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 15,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001358,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002092,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 11,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002457,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 16,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001209,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 19,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001676,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 16,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002010,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 11,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001768,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 11,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001457,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 13,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002365,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 16,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002456,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001231,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 10,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001217,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 7,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025000403,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 13,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001509,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001827,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 12,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002206,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001448,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025000658,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001077,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 12,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002394,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002658,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 11,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002923,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 7,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002935,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 4,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003006,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 7,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002630,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001659,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 6,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025000272,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 7,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002508,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002648,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002861,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 2,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002479,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 13,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002470,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002967,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003186,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 10,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002931,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003579,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 10,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002974,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003538,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 5,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003508,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 10,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002939,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 6,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003757,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 17,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003744,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003588,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003675,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 13,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002985,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 7,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003671,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 9,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003765,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 3,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002465,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 13,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002053,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025000269,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003741,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 11,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001331,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 10,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002540,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 11,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025000670,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001717,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 2,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003701,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 6,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001784,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002469,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 4,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002477,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 7,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002534,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 9,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002815,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 12,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002843,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003667,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 7,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002936,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003706,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003719,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025000168,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 10,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003752,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003747,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001847,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 9,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001918,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003580,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003611,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 11,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025001403,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 1,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003720,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 3,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002498,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003698,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 14,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002520,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 6,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003627,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003658,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003663,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 9,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003695,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 12,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002925,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 13,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002466,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 12,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002983,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025002512,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003713,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 8,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    },
+    {
+      "studentCode": 2025003668,
+      "studentName": null,
+      "total": 0,
+      "gradeLetter": "F",
+      "isIC": false,
+      "canSaveDegree": false,
+      "point": "0",
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 1103,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1106,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1104,
+          "studentDegree": 0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 1102,
+          "studentDegree": 0,
+          "isFinal": false
+        }
+      ]
+    }
+  ]
+}

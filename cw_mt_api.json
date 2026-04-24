@@ -1,0 +1,42 @@
+{
+  "studentSubjectDegreeAdd": {
+    "academicYearCode": 2025,
+    "semesterCode": 1,
+    "branchCode": 1,
+    "facultyCode": 1,
+    "subjectCode": 359,
+    "sectionCode": 1,
+    "studentCode": null,
+    "lang": "ar",
+    "orderBy": 1,
+    "committeDegree": 0,
+    "secondLangCode": 0
+  },
+  "studentSubjectDegreeMain": [
+    {
+      "studentCode": 2025003496,
+      "facultyCode": 1,
+      "sectionCode": 1,
+      "studentName": null,
+      "total": 38.0,
+      "gradeLetter": "Fail",
+      "isIC": false,
+      "canSaveDegree": true,
+      "point": 38.0,
+      "subjectRepeatedTimes": 0,
+      "subjectStatusCode": 1,
+      "details": [
+        {
+          "subjectDegreeItemCode": 211,
+          "studentDegree": 28.0,
+          "isFinal": false
+        },
+        {
+          "subjectDegreeItemCode": 212,
+          "studentDegree": 10.0,
+          "isFinal": true
+        }
+      ]
+    }
+  ]
+}
