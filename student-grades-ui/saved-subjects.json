@@ -1,5 +1,51 @@
 [
   {
+    "id": "94efb1b4-0454-4ccf-b958-5dc8caf0ba1c",
+    "name": "English 1",
+    "subjectCode": "275",
+    "degreeItems": [
+      {
+        "id": "26e816a8-58c8-41fe-a321-b106fd15aa01",
+        "label": "Practical Exam",
+        "code": "1227",
+        "isFinal": false
+      },
+      {
+        "id": "3c7ef564-c967-44c6-b942-4708f02cce2e",
+        "label": "Mid term",
+        "code": "1224",
+        "isFinal": false
+      },
+      {
+        "id": "cba0569a-eed2-49e2-8fe6-65947d4ded74",
+        "label": "Case Studies",
+        "code": "1228",
+        "isFinal": false
+      },
+      {
+        "id": "eb0a74b4-04a5-486c-b63f-3c73d71cba1e",
+        "label": "Presentation and Discussions",
+        "code": "1225",
+        "isFinal": true
+      },
+      {
+        "id": "97467d41-26bc-425d-a2df-25cfcf4dde7c",
+        "label": "Final Project / Exam",
+        "code": "1226",
+        "isFinal": false
+      }
+    ],
+    "metadata": {
+      "academicYearCode": "2025",
+      "semesterCode": "5",
+      "branchCode": "1",
+      "facultyCode": "2",
+      "sectionCode": "3"
+    },
+    "apiUrl": "https://api.seu.edu.eg/api/StudentSubjectDegrees/StudentSubjectDegrees1",
+    "updatedAt": "2026-04-26T06:15:58.662Z"
+  },
+  {
     "id": "5b419f85-4dff-40f0-9dcc-ec08cfc2840d",
     "name": "Maintenance",
     "subjectCode": "483",
