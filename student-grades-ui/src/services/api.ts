@@ -1,4 +1,4 @@
-import type { ApiConfigForm, ApiSuccessResponse, GradesPayload } from "../types";
+import type { ApiConfigForm, ApiSuccessResponse, AuthAccount, GradesPayload } from "../types";
 
 export class ApiServiceError extends Error {
   readonly status?: number;
@@ -12,7 +12,11 @@ export class ApiServiceError extends Error {
   }
 }
 
-export async function postGrades(payload: GradesPayload, api: ApiConfigForm): Promise<ApiSuccessResponse> {
+export async function postGrades(
+  payload: GradesPayload,
+  api: ApiConfigForm,
+  account: AuthAccount | null,
+): Promise<ApiSuccessResponse> {
   let response: Response;
 
   try {
@@ -24,6 +28,12 @@ export async function postGrades(payload: GradesPayload, api: ApiConfigForm): Pr
       body: JSON.stringify({
         apiUrl: api.url,
         payload,
+        auth: account
+          ? {
+              username: account.username,
+              password: account.password,
+            }
+          : null,
       }),
     });
   } catch (error) {

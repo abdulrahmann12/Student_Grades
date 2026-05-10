@@ -9,10 +9,13 @@ import { PreviewSection } from "./components/PreviewSection";
 import { SubjectConfigSection } from "./components/SubjectConfigSection";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { useLocalStorage } from "./hooks/useLocalStorage";
+import { fetchDefaultAuthAccount } from "./services/accounts";
 import { ApiServiceError, postGrades } from "./services/api";
 import { fetchSavedSubjectPresets, saveSavedSubjectPresets } from "./services/presets";
 import type {
   ApiConfigForm,
+  AuthAccount,
+  AuthAccountSummary,
   AppFormState,
   DegreeItemForm,
   FeedbackState,
@@ -43,11 +46,43 @@ function getErrorMessage(error: unknown) {
   return "An unexpected error occurred.";
 }
 
+function createAccountKey(username: string) {
+  return username.trim().toLowerCase() || "default";
+}
+
+function sortAccounts(left: AuthAccount, right: AuthAccount) {
+  return right.updatedAt.localeCompare(left.updatedAt);
+}
+
+function upsertAccount(accounts: AuthAccount[], account: AuthAccount) {
+  return [account, ...accounts.filter((item) => item.key !== account.key)].sort(sortAccounts);
+}
+
+function mergeDefaultAccount(accounts: AuthAccount[], defaultAccount: AuthAccountSummary) {
+  const existing = accounts.find((item) => item.key === defaultAccount.key);
+
+  return upsertAccount(accounts, {
+    key: defaultAccount.key,
+    username: defaultAccount.username,
+    password: existing?.password ?? "",
+    source: existing?.source ?? "env",
+    updatedAt: existing?.updatedAt ?? new Date().toISOString(),
+  });
+}
+
 export default function App() {
   const [form, setForm] = useLocalStorage<AppFormState>(
     STORAGE_KEYS.draftConfig,
     createDefaultFormState(),
   );
+  const [accounts, setAccounts] = useLocalStorage<AuthAccount[]>(STORAGE_KEYS.accounts, []);
+  const [activeAccountKey, setActiveAccountKey] = useLocalStorage<string>(
+    STORAGE_KEYS.activeAccountKey,
+    "",
+  );
+  const [accountPresetSelections, setAccountPresetSelections] = useLocalStorage<
+    Record<string, string>
+  >(STORAGE_KEYS.accountPresetSelections, {});
   const [savedSubjects, setSavedSubjects] = useState<SavedSubjectPreset[]>([]);
   const [theme, setTheme] = useLocalStorage<ThemeMode>(STORAGE_KEYS.theme, "light");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -56,8 +91,68 @@ export default function App() {
   const [feedback, setFeedback] = useState<FeedbackState | null>(null);
   const [busyAction, setBusyAction] = useState<"send" | "single" | null>(null);
   const [selectedPresetId, setSelectedPresetId] = useState("");
+  const [accountUsername, setAccountUsername] = useState("");
+  const [accountPassword, setAccountPassword] = useState("");
+  const [accountsReady, setAccountsReady] = useState(false);
+  const [defaultAccount, setDefaultAccount] = useState<AuthAccountSummary | null>(null);
 
+  const activeAccount = useMemo(
+    () => accounts.find((account) => account.key === activeAccountKey) ?? null,
+    [accounts, activeAccountKey],
+  );
   const validation = useMemo(() => validateForm(form, selectedFile), [form, selectedFile]);
+
+  const resetPreview = () => {
+    setPreview(createEmptyPreviewState());
+  };
+
+  const updateForm = (updater: (current: AppFormState) => AppFormState) => {
+    resetPreview();
+    setForm(updater);
+  };
+
+  const rememberPresetSelection = (accountKey: string, presetId: string) => {
+    setAccountPresetSelections((current) => {
+      if (!presetId) {
+        if (!(accountKey in current)) {
+          return current;
+        }
+
+        const nextSelections = { ...current };
+        delete nextSelections[accountKey];
+        return nextSelections;
+      }
+
+      if (current[accountKey] === presetId) {
+        return current;
+      }
+
+      return {
+        ...current,
+        [accountKey]: presetId,
+      };
+    });
+  };
+
+  const applyPresetToForm = (preset: SavedSubjectPreset) => {
+    updateForm((current) => ({
+      ...current,
+      subject: {
+        presetName: preset.name,
+        subjectCode: preset.subjectCode,
+        degreeItems: preset.degreeItems.map((item) => ({ ...item })),
+      },
+      metadata: { ...preset.metadata },
+      api: {
+        ...current.api,
+        url: preset.apiUrl,
+      },
+    }));
+  };
+
+  const resetAccountForm = () => {
+    updateForm(() => createDefaultFormState());
+  };
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
@@ -66,15 +161,102 @@ export default function App() {
   useEffect(() => {
     let active = true;
 
+    const loadDefaultAccount = async () => {
+      try {
+        const nextDefaultAccount = await fetchDefaultAuthAccount();
+
+        if (!active) {
+          return;
+        }
+
+        setDefaultAccount(nextDefaultAccount);
+
+        if (nextDefaultAccount) {
+          setAccounts((current) => mergeDefaultAccount(current, nextDefaultAccount));
+          setActiveAccountKey((current) => current || nextDefaultAccount.key);
+        }
+      } catch (error) {
+        if (!active) {
+          return;
+        }
+
+        setFeedback({
+          type: "error",
+          title: "Unable to load default account",
+          message: getErrorMessage(error),
+        });
+      } finally {
+        if (active) {
+          setAccountsReady(true);
+        }
+      }
+    };
+
+    void loadDefaultAccount();
+
+    return () => {
+      active = false;
+    };
+  }, [setAccounts, setActiveAccountKey]);
+
+  useEffect(() => {
+    if (!accountsReady) {
+      return;
+    }
+
+    if (accounts.length === 0) {
+      if (activeAccountKey) {
+        setActiveAccountKey("");
+      }
+      return;
+    }
+
+    if (!accounts.some((account) => account.key === activeAccountKey)) {
+      setActiveAccountKey(accounts[0].key);
+    }
+  }, [accounts, activeAccountKey, accountsReady, setActiveAccountKey]);
+
+  useEffect(() => {
+    let active = true;
+
+    if (!accountsReady) {
+      return () => {
+        active = false;
+      };
+    }
+
+    if (!activeAccountKey) {
+      setSavedSubjects([]);
+      setSelectedPresetId("");
+      return () => {
+        active = false;
+      };
+    }
+
     const loadSavedSubjects = async () => {
       try {
-        const presets = await fetchSavedSubjectPresets();
+        const presets = await fetchSavedSubjectPresets(activeAccountKey);
 
         if (!active) {
           return;
         }
 
         setSavedSubjects(presets);
+
+        const preferredPreset =
+          presets.find((subject) => subject.id === accountPresetSelections[activeAccountKey]) ??
+          presets[0] ??
+          null;
+
+        if (preferredPreset) {
+          setSelectedPresetId(preferredPreset.id);
+          rememberPresetSelection(activeAccountKey, preferredPreset.id);
+          applyPresetToForm(preferredPreset);
+        } else {
+          setSelectedPresetId("");
+          rememberPresetSelection(activeAccountKey, "");
+          resetAccountForm();
+        }
       } catch (error) {
         if (!active) {
           return;
@@ -93,23 +275,19 @@ export default function App() {
     return () => {
       active = false;
     };
-  }, []);
-
-  const resetPreview = () => {
-    setPreview(createEmptyPreviewState());
-  };
-
-  const updateForm = (updater: (current: AppFormState) => AppFormState) => {
-    resetPreview();
-    setForm(updater);
-  };
+  }, [accountPresetSelections, accountsReady, activeAccountKey]);
 
   const persistSavedSubjects = async (nextSavedSubjects: SavedSubjectPreset[]) => {
-    const persisted = await saveSavedSubjectPresets(nextSavedSubjects);
+    if (!activeAccountKey) {
+      throw new Error("Add or select an account before saving subjects.");
+    }
+
+    const persisted = await saveSavedSubjectPresets(activeAccountKey, nextSavedSubjects);
     setSavedSubjects(persisted);
 
     if (selectedPresetId && !persisted.some((item) => item.id === selectedPresetId)) {
       setSelectedPresetId("");
+      rememberPresetSelection(activeAccountKey, "");
     }
 
     return persisted;
@@ -225,6 +403,15 @@ export default function App() {
   };
 
   const sendPayload = async (mode: "send" | "single") => {
+    if (!activeAccount) {
+      setFeedback({
+        type: "error",
+        title: "Account required",
+        message: "Add or select an account before sending grades to the API.",
+      });
+      return;
+    }
+
     const payload = buildPreview("request");
 
     if (!payload) {
@@ -240,7 +427,11 @@ export default function App() {
     setBusyAction(mode);
 
     try {
-      const response = await postGrades(requestPayload, form.api);
+      const response = await postGrades(
+        requestPayload,
+        form.api,
+        activeAccount.source === "local" ? activeAccount : null,
+      );
       setPreview({
         payload: requestPayload,
         issues: [],
@@ -307,6 +498,15 @@ export default function App() {
   };
 
   const handleSavePreset = async () => {
+    if (!activeAccount) {
+      setFeedback({
+        type: "error",
+        title: "Account required",
+        message: "Select an account before saving a subject preset.",
+      });
+      return;
+    }
+
     const name = form.subject.presetName.trim();
 
     if (!name) {
@@ -341,10 +541,11 @@ export default function App() {
 
       await persistSavedSubjects(nextSavedSubjects);
       setSelectedPresetId(presetId);
+      rememberPresetSelection(activeAccount.key, presetId);
       setFeedback({
         type: "success",
         title: existing ? "Preset updated" : "Preset saved",
-        message: `${name} is now available from the project preset file.`,
+        message: `${name} is now available for ${activeAccount.username}.`,
       });
     } catch (error) {
       setFeedback({
@@ -367,19 +568,12 @@ export default function App() {
       return;
     }
 
-    updateForm((current) => ({
-      ...current,
-      subject: {
-        presetName: preset.name,
-        subjectCode: preset.subjectCode,
-        degreeItems: preset.degreeItems.map((item) => ({ ...item })),
-      },
-      metadata: { ...preset.metadata },
-      api: {
-        ...current.api,
-        url: preset.apiUrl,
-      },
-    }));
+    applyPresetToForm(preset);
+
+    if (activeAccountKey) {
+      rememberPresetSelection(activeAccountKey, preset.id);
+    }
+
     setFeedback({
       type: "info",
       title: "Preset loaded",
@@ -398,11 +592,27 @@ export default function App() {
       const nextSavedSubjects = savedSubjects.filter((item) => item.id !== preset.id);
 
       await persistSavedSubjects(nextSavedSubjects);
-      setSelectedPresetId("");
+
+      const nextPreset = nextSavedSubjects[0] ?? null;
+
+      if (nextPreset && activeAccountKey) {
+        setSelectedPresetId(nextPreset.id);
+        rememberPresetSelection(activeAccountKey, nextPreset.id);
+        applyPresetToForm(nextPreset);
+      } else {
+        setSelectedPresetId("");
+
+        if (activeAccountKey) {
+          rememberPresetSelection(activeAccountKey, "");
+        }
+
+        resetAccountForm();
+      }
+
       setFeedback({
         type: "info",
         title: "Preset deleted",
-        message: `${preset.name} has been removed from the project preset file.`,
+        message: `${preset.name} has been removed from this account.`,
       });
     } catch (error) {
       setFeedback({
@@ -433,9 +643,102 @@ export default function App() {
     }));
   };
 
+  const handleAccountSave = () => {
+    const username = accountUsername.trim();
+    const password = accountPassword.trim();
+
+    if (!username || !password) {
+      setFeedback({
+        type: "error",
+        title: "Account details required",
+        message: "Enter both username and password before saving a local account.",
+      });
+      return;
+    }
+
+    const nextAccount: AuthAccount = {
+      key: createAccountKey(username),
+      username,
+      password,
+      source: "local",
+      updatedAt: new Date().toISOString(),
+    };
+    const isUpdate = accounts.some((account) => account.key === nextAccount.key);
+
+    setAccounts((current) => upsertAccount(current, nextAccount));
+    setActiveAccountKey(nextAccount.key);
+    setAccountUsername("");
+    setAccountPassword("");
+    setFeedback({
+      type: "success",
+      title: isUpdate ? "Account updated" : "Account added",
+      message: `${username} is ready. Any saved subjects will stay linked to this account.`,
+    });
+  };
+
+  const handleAccountDelete = () => {
+    if (!activeAccount) {
+      return;
+    }
+
+    if (activeAccount.source !== "local") {
+      setFeedback({
+        type: "info",
+        title: "Built-in account kept",
+        message: "The account loaded from .env stays available automatically and cannot be removed here.",
+      });
+      return;
+    }
+
+    if (defaultAccount?.key === activeAccount.key) {
+      const restoredAccount: AuthAccount = {
+        key: defaultAccount.key,
+        username: defaultAccount.username,
+        password: "",
+        source: "env",
+        updatedAt: new Date().toISOString(),
+      };
+
+      setAccounts((current) =>
+        upsertAccount(
+          current.filter((account) => account.key !== activeAccount.key),
+          restoredAccount,
+        ),
+      );
+      setActiveAccountKey(restoredAccount.key);
+      setFeedback({
+        type: "info",
+        title: "Local override removed",
+        message: `${activeAccount.username} now uses the .env credentials again.`,
+      });
+      return;
+    }
+
+    const remainingAccounts = accounts.filter((account) => account.key !== activeAccount.key);
+
+    setAccounts(remainingAccounts);
+    setActiveAccountKey(remainingAccounts[0]?.key ?? "");
+    setFeedback({
+      type: "info",
+      title: "Account removed",
+      message: `${activeAccount.username} has been removed from this browser.`,
+    });
+  };
+
+  const handlePresetSelection = (value: string) => {
+    setSelectedPresetId(value);
+
+    if (activeAccountKey) {
+      rememberPresetSelection(activeAccountKey, value);
+    }
+  };
+
   const generateDisabled = validation.generateErrorCount > 0 || excelRows.length === 0;
   const sendDisabled =
-    validation.requestErrorCount > 0 || excelRows.length === 0 || busyAction !== null;
+    validation.requestErrorCount > 0 ||
+    excelRows.length === 0 ||
+    busyAction !== null ||
+    !activeAccount;
 
   return (
     <div className="app-shell">
@@ -454,7 +757,7 @@ export default function App() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <span className="pill">Dynamic degree mappings</span>
-              <span className="pill">Project subject presets</span>
+              <span className="pill">Account-scoped presets</span>
               <span className="pill">Live JSON preview</span>
             </div>
           </div>
@@ -477,6 +780,22 @@ export default function App() {
           onClear={handleClearFile}
         />
 
+        <ApiConfigSection
+          api={form.api}
+          accounts={accounts}
+          activeAccount={activeAccount}
+          activeAccountKey={activeAccountKey}
+          accountUsername={accountUsername}
+          accountPassword={accountPassword}
+          errors={validation.fieldErrors}
+          onChange={handleApiChange}
+          onAccountUsernameChange={setAccountUsername}
+          onAccountPasswordChange={setAccountPassword}
+          onSelectAccount={setActiveAccountKey}
+          onSaveAccount={handleAccountSave}
+          onDeleteAccount={handleAccountDelete}
+        />
+
         <SubjectConfigSection
           subject={form.subject}
           savedSubjects={savedSubjects}
@@ -491,7 +810,7 @@ export default function App() {
               },
             }))
           }
-          onSelectPreset={setSelectedPresetId}
+          onSelectPreset={handlePresetSelection}
           onSavePreset={() => {
             void handleSavePreset();
           }}
@@ -517,12 +836,6 @@ export default function App() {
           metadata={form.metadata}
           errors={validation.fieldErrors}
           onChange={handleMetadataChange}
-        />
-
-        <ApiConfigSection
-          api={form.api}
-          errors={validation.fieldErrors}
-          onChange={handleApiChange}
         />
 
         <ActionBar

@@ -2,6 +2,11 @@ import type { SavedSubjectPreset } from "../types";
 
 const SAVED_SUBJECTS_ENDPOINT = "/api/saved-subjects";
 
+function buildSavedSubjectsUrl(accountKey: string) {
+  const searchParams = new URLSearchParams({ accountKey });
+  return `${SAVED_SUBJECTS_ENDPOINT}?${searchParams.toString()}`;
+}
+
 async function parseResponseBody(response: Response) {
   const rawBody = await response.text();
 
@@ -31,11 +36,11 @@ function buildErrorMessage(status: number, body: unknown) {
   return `Unexpected preset storage response (status ${status}).`;
 }
 
-async function requestSavedSubjectPresets(init?: RequestInit) {
+async function requestSavedSubjectPresets(url: string, init?: RequestInit) {
   let response: Response;
 
   try {
-    response = await fetch(SAVED_SUBJECTS_ENDPOINT, init);
+    response = await fetch(url, init);
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown network error.";
     throw new Error(`Unable to reach the saved subjects file service: ${message}`);
@@ -54,19 +59,22 @@ async function requestSavedSubjectPresets(init?: RequestInit) {
   return body as SavedSubjectPreset[];
 }
 
-export function fetchSavedSubjectPresets() {
-  return requestSavedSubjectPresets({
+export function fetchSavedSubjectPresets(accountKey: string) {
+  return requestSavedSubjectPresets(buildSavedSubjectsUrl(accountKey), {
     method: "GET",
     cache: "no-store",
   });
 }
 
-export function saveSavedSubjectPresets(presets: SavedSubjectPreset[]) {
-  return requestSavedSubjectPresets({
+export function saveSavedSubjectPresets(accountKey: string, presets: SavedSubjectPreset[]) {
+  return requestSavedSubjectPresets(SAVED_SUBJECTS_ENDPOINT, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(presets),
+    body: JSON.stringify({
+      accountKey,
+      presets,
+    }),
   });
 }

@@ -30,7 +30,7 @@ export function SavedConfigurations({
         </div>
         <div>
           <h3 className="text-sm font-semibold text-[rgb(var(--text))]">Saved subject setups</h3>
-          <p className="mt-1 text-sm text-[rgb(var(--muted))]">Save repeatable subject mappings and metadata into the project file <span className="font-semibold">saved-subjects.json</span>. Authentication stays on the local server and out of saved presets.</p>
+          <p className="mt-1 text-sm text-[rgb(var(--muted))]">Save repeatable subject mappings and metadata into the project file <span className="font-semibold">saved-subjects.json</span>. Presets are grouped by account, so switching the active account loads its own saved subjects automatically.</p>
         </div>
       </div>
 
@@ -93,7 +93,7 @@ export function SavedConfigurations({
       </div>
 
       {savedSubjects.length === 0 ? (
-        <p className="mt-4 text-sm text-[rgb(var(--muted))]">No saved presets yet. Save one after configuring a subject once and it will be written to the project file.</p>
+        <p className="mt-4 text-sm text-[rgb(var(--muted))]">No saved presets for this account yet. Save one after configuring a subject once and it will be written to the project file.</p>
       ) : null}
     </div>
   );

@@ -4,6 +4,9 @@ export const STUDENT_ID_COLUMN = "StudentID";
 
 export const STORAGE_KEYS = {
   draftConfig: "grades-upload:draft-config",
+  accounts: "grades-upload:accounts",
+  activeAccountKey: "grades-upload:active-account",
+  accountPresetSelections: "grades-upload:account-preset-selections",
   savedSubjects: "grades-upload:saved-subjects",
   theme: "grades-upload:theme",
 } as const;

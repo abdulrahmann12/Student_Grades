@@ -18,7 +18,7 @@ const metadataFields: Array<{ key: keyof MetadataForm; label: string; placeholde
 export function MetadataSection({ metadata, errors, onChange }: MetadataSectionProps) {
   return (
     <SectionCard
-      eyebrow="Step 3"
+      eyebrow="Step 4"
       title="Academic Metadata"
       description="These numeric fields are attached to every generated payload and must match the target academic context."
     >

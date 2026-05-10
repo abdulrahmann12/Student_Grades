@@ -41,7 +41,7 @@ export function SubjectConfigSection({
 }: SubjectConfigSectionProps) {
   return (
     <SectionCard
-      eyebrow="Step 2"
+      eyebrow="Step 3"
       title="Subject Configuration"
       description="Keep the subject code and degree-to-column mapping editable so the same UI works for any subject without code changes."
     >

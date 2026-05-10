@@ -25,6 +25,19 @@ export interface ApiConfigForm {
   url: string;
 }
 
+export interface AuthAccount {
+  key: string;
+  username: string;
+  password: string;
+  source: "local" | "env";
+  updatedAt: string;
+}
+
+export interface AuthAccountSummary {
+  key: string;
+  username: string;
+}
+
 export interface AppFormState {
   subject: SubjectForm;
   metadata: MetadataForm;

@@ -13,32 +13,88 @@ const envFileCandidates = [
     path.resolve(projectRoot, ".env"),
 ];
 const defaultAuthLoginUrl = "https://api.seu.edu.eg/api/auth/login";
+function normalizeAccountKey(username) {
+    return username.trim().toLowerCase() || "default";
+}
+function isObjectRecord(value) {
+    return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+function createEmptySavedSubjectsStore() {
+    return {
+        version: 2,
+        accounts: {},
+    };
+}
+function createEmptyTokenCacheStore() {
+    return {
+        version: 2,
+        accounts: {},
+    };
+}
+function getFallbackAccountKey(defaultAccount) {
+    return defaultAccount?.key ?? "default";
+}
 async function ensureSavedSubjectsFile() {
     try {
         await fs.access(savedSubjectsFilePath);
     }
     catch {
-        await fs.writeFile(savedSubjectsFilePath, "[]\n", "utf8");
+        await fs.writeFile(savedSubjectsFilePath, `${JSON.stringify(createEmptySavedSubjectsStore(), null, 2)}\n`, "utf8");
     }
 }
-async function readSavedSubjects() {
+function normalizeSavedSubjectsStore(parsed, defaultAccount) {
+    if (Array.isArray(parsed)) {
+        return {
+            version: 2,
+            accounts: {
+                [getFallbackAccountKey(defaultAccount)]: parsed,
+            },
+        };
+    }
+    if (isObjectRecord(parsed) && isObjectRecord(parsed.accounts)) {
+        const accounts = Object.entries(parsed.accounts).reduce((result, [key, value]) => {
+            if (Array.isArray(value)) {
+                result[normalizeAccountKey(key)] = value;
+            }
+            return result;
+        }, {});
+        return {
+            version: 2,
+            accounts,
+        };
+    }
+    return createEmptySavedSubjectsStore();
+}
+async function readSavedSubjectsStore() {
     await ensureSavedSubjectsFile();
     try {
         const rawFile = await fs.readFile(savedSubjectsFilePath, "utf8");
-        const parsed = JSON.parse(rawFile || "[]");
-        return Array.isArray(parsed) ? parsed : [];
+        const parsed = JSON.parse(rawFile || "{}");
+        const defaultAccount = await getDefaultAuthAccountSummary();
+        return normalizeSavedSubjectsStore(parsed, defaultAccount);
     }
     catch {
-        return [];
+        return createEmptySavedSubjectsStore();
     }
 }
-async function writeSavedSubjects(payload) {
-    if (!Array.isArray(payload)) {
+function validateAccountKey(accountKey) {
+    if (typeof accountKey !== "string" || !accountKey.trim()) {
+        throw new Error("An account key is required.");
+    }
+    return normalizeAccountKey(accountKey);
+}
+async function readSavedSubjects(accountKey) {
+    const store = await readSavedSubjectsStore();
+    return store.accounts[validateAccountKey(accountKey)] ?? [];
+}
+async function writeSavedSubjects(accountKey, presets) {
+    if (!Array.isArray(presets)) {
         throw new Error("Saved subjects payload must be an array.");
     }
-    await ensureSavedSubjectsFile();
-    await fs.writeFile(savedSubjectsFilePath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
-    return payload;
+    const store = await readSavedSubjectsStore();
+    store.accounts[validateAccountKey(accountKey)] = presets;
+    await fs.writeFile(savedSubjectsFilePath, `${JSON.stringify(store, null, 2)}\n`, "utf8");
+    return presets;
 }
 async function readJsonBody(request) {
     const chunks = [];
@@ -77,15 +133,31 @@ async function loadEnvFile(filePath) {
         }
     }
 }
-async function getAuthConfig() {
+async function getDefaultAuthAccountSummary() {
     for (const envFilePath of envFileCandidates) {
         await loadEnvFile(envFilePath);
     }
+    const username = process.env.AUTH_USERNAME?.trim() || "";
+    if (!username) {
+        return null;
+    }
+    return {
+        key: normalizeAccountKey(username),
+        username,
+    };
+}
+async function getAuthConfig(authOverride = null) {
+    for (const envFilePath of envFileCandidates) {
+        await loadEnvFile(envFilePath);
+    }
+    const username = authOverride ? authOverride.username.trim() : process.env.AUTH_USERNAME?.trim() || "";
+    const password = authOverride ? authOverride.password.trim() : process.env.AUTH_PASSWORD?.trim() || "";
     return {
         loginUrl: process.env.AUTH_LOGIN_URL?.trim() || defaultAuthLoginUrl,
-        username: process.env.AUTH_USERNAME?.trim() || "",
-        password: process.env.AUTH_PASSWORD?.trim() || "",
+        username,
+        password,
         tokenCacheFilePath: sharedTokenCacheFilePath,
+        accountKey: normalizeAccountKey(username),
     };
 }
 function decodeJwtPayload(token) {
@@ -112,16 +184,80 @@ function getTokenExpiration(token) {
 function formatErrorBody(body) {
     return typeof body === "string" ? body || "No response body returned." : JSON.stringify(body, null, 2);
 }
-async function readCachedToken(authConfig) {
+function normalizeTokenCacheStore(parsed, fallbackAccountKey) {
+    if (isObjectRecord(parsed) && isObjectRecord(parsed.accounts)) {
+        const accounts = Object.entries(parsed.accounts).reduce((result, [key, value]) => {
+            if (!isObjectRecord(value)) {
+                return result;
+            }
+            const token = typeof value.token === "string" ? value.token.trim() : "";
+            const refreshToken = typeof value.refreshToken === "string" ? value.refreshToken.trim() : "";
+            const exp = typeof value.exp === "number" && Number.isInteger(value.exp)
+                ? value.exp
+                : token
+                    ? getTokenExpiration(token)
+                    : 0;
+            if (token && refreshToken && exp) {
+                result[normalizeAccountKey(key)] = {
+                    token,
+                    refreshToken,
+                    exp,
+                };
+            }
+            return result;
+        }, {});
+        return {
+            version: 2,
+            accounts,
+        };
+    }
+    if (isObjectRecord(parsed)) {
+        const token = typeof parsed.token === "string" ? parsed.token.trim() : "";
+        const refreshToken = typeof parsed.refreshToken === "string" ? parsed.refreshToken.trim() : "";
+        const exp = typeof parsed.exp === "number" && Number.isInteger(parsed.exp)
+            ? parsed.exp
+            : token
+                ? getTokenExpiration(token)
+                : 0;
+        if (token && refreshToken && exp) {
+            return {
+                version: 2,
+                accounts: {
+                    [fallbackAccountKey]: {
+                        token,
+                        refreshToken,
+                        exp,
+                    },
+                },
+            };
+        }
+    }
+    return createEmptyTokenCacheStore();
+}
+async function readTokenCacheStore(authConfig) {
     try {
         const rawFile = await fs.readFile(authConfig.tokenCacheFilePath, "utf8");
-        const parsed = JSON.parse(rawFile);
-        const token = typeof parsed.token === "string" ? parsed.token.trim() : "";
+        const parsed = JSON.parse(rawFile || "{}");
+        return normalizeTokenCacheStore(parsed, authConfig.accountKey);
+    }
+    catch (error) {
+        const nodeError = error;
+        if (nodeError.code === "ENOENT") {
+            return createEmptyTokenCacheStore();
+        }
+        return createEmptyTokenCacheStore();
+    }
+}
+async function readCachedToken(authConfig) {
+    try {
+        const store = await readTokenCacheStore(authConfig);
+        const cachedEntry = store.accounts[authConfig.accountKey];
+        const token = typeof cachedEntry?.token === "string" ? cachedEntry.token.trim() : "";
         if (!token) {
             return null;
         }
-        const expiration = typeof parsed.exp === "number" && Number.isInteger(parsed.exp)
-            ? parsed.exp
+        const expiration = typeof cachedEntry?.exp === "number" && Number.isInteger(cachedEntry.exp)
+            ? cachedEntry.exp
             : getTokenExpiration(token);
         if (Math.floor(Date.now() / 1000) >= expiration) {
             return null;
@@ -138,10 +274,16 @@ async function readCachedToken(authConfig) {
 }
 async function writeTokenCache(authConfig, token, refreshToken, exp) {
     await fs.mkdir(path.dirname(authConfig.tokenCacheFilePath), { recursive: true });
-    await fs.writeFile(authConfig.tokenCacheFilePath, `${JSON.stringify({ token, refreshToken, exp }, null, 2)}\n`, "utf8");
+    const store = await readTokenCacheStore(authConfig);
+    store.accounts[authConfig.accountKey] = {
+        token,
+        refreshToken,
+        exp,
+    };
+    await fs.writeFile(authConfig.tokenCacheFilePath, `${JSON.stringify(store, null, 2)}\n`, "utf8");
 }
-async function getAuthToken() {
-    const authConfig = await getAuthConfig();
+async function getAuthToken(authOverride = null) {
+    const authConfig = await getAuthConfig(authOverride);
     const cachedToken = await readCachedToken(authConfig);
     if (cachedToken) {
         return cachedToken;
@@ -189,6 +331,23 @@ async function getAuthToken() {
     await writeTokenCache(authConfig, token, refreshToken, exp);
     return token;
 }
+function parseAuthOverride(value) {
+    if (value === null || typeof value === "undefined") {
+        return null;
+    }
+    if (!isObjectRecord(value)) {
+        throw new Error("Authentication override must be an object.");
+    }
+    const username = typeof value.username === "string" ? value.username.trim() : "";
+    const password = typeof value.password === "string" ? value.password.trim() : "";
+    if (!username || !password) {
+        throw new Error("Both username and password are required for a saved local account.");
+    }
+    return {
+        username,
+        password,
+    };
+}
 function validateApiUrl(apiUrl) {
     if (typeof apiUrl !== "string" || !apiUrl.trim()) {
         throw new Error("A target API URL is required.");
@@ -199,8 +358,8 @@ function validateApiUrl(apiUrl) {
     }
     return parsedUrl.toString();
 }
-async function proxyGradesRequest(payload, apiUrl) {
-    const token = await getAuthToken();
+async function proxyGradesRequest(payload, apiUrl, authOverride) {
+    const token = await getAuthToken(authOverride);
     return fetch(apiUrl, {
         method: "POST",
         headers: {
@@ -209,6 +368,43 @@ async function proxyGradesRequest(payload, apiUrl) {
         },
         body: JSON.stringify(payload),
     });
+}
+async function getRequestedAccountKey(requestUrl) {
+    const requestedAccountKey = requestUrl.searchParams.get("accountKey");
+    if (requestedAccountKey) {
+        return validateAccountKey(requestedAccountKey);
+    }
+    return getFallbackAccountKey(await getDefaultAuthAccountSummary());
+}
+function createAccountsPlugin() {
+    const handleRequest = async (request, response, next) => {
+        const requestUrl = new URL(request.url ?? "/", "http://localhost");
+        if (requestUrl.pathname !== "/api/accounts/default") {
+            next();
+            return;
+        }
+        try {
+            if (request.method !== "GET") {
+                response.setHeader("Allow", "GET");
+                sendJson(response, 405, { message: "Method not allowed." });
+                return;
+            }
+            sendJson(response, 200, await getDefaultAuthAccountSummary());
+        }
+        catch (error) {
+            const message = error instanceof Error ? error.message : "Unexpected account lookup error.";
+            sendJson(response, 500, { message });
+        }
+    };
+    return {
+        name: "default-account-api",
+        configureServer(server) {
+            server.middlewares.use(handleRequest);
+        },
+        configurePreviewServer(server) {
+            server.middlewares.use(handleRequest);
+        },
+    };
 }
 function createSavedSubjectsPlugin() {
     const handleRequest = async (request, response, next) => {
@@ -219,12 +415,24 @@ function createSavedSubjectsPlugin() {
         }
         try {
             if (request.method === "GET") {
-                sendJson(response, 200, await readSavedSubjects());
+                sendJson(response, 200, await readSavedSubjects(await getRequestedAccountKey(requestUrl)));
                 return;
             }
             if (request.method === "PUT") {
                 const payload = await readJsonBody(request);
-                sendJson(response, 200, await writeSavedSubjects(payload));
+                if (Array.isArray(payload)) {
+                    sendJson(response, 200, await writeSavedSubjects(getFallbackAccountKey(await getDefaultAuthAccountSummary()), payload));
+                    return;
+                }
+                const accountKey = payload && typeof payload === "object"
+                    ? payload.accountKey
+                    : undefined;
+                const presets = payload && typeof payload === "object"
+                    ? payload.presets
+                    : undefined;
+                sendJson(response, 200, await writeSavedSubjects(typeof accountKey === "string"
+                    ? accountKey
+                    : getFallbackAccountKey(await getDefaultAuthAccountSummary()), presets));
                 return;
             }
             response.setHeader("Allow", "GET, PUT");
@@ -261,7 +469,8 @@ function createGradesProxyPlugin() {
             const body = await readJsonBody(request);
             const payload = body && typeof body === "object" ? body.payload : undefined;
             const apiUrl = validateApiUrl(body && typeof body === "object" ? body.apiUrl : undefined);
-            const upstreamResponse = await proxyGradesRequest(payload, apiUrl);
+            const authOverride = parseAuthOverride(body && typeof body === "object" ? body.auth : undefined);
+            const upstreamResponse = await proxyGradesRequest(payload, apiUrl, authOverride);
             const rawBody = await upstreamResponse.text();
             const contentType = upstreamResponse.headers.get("content-type");
             response.statusCode = upstreamResponse.status;
@@ -286,5 +495,5 @@ function createGradesProxyPlugin() {
     };
 }
 export default defineConfig({
-    plugins: [react(), createSavedSubjectsPlugin(), createGradesProxyPlugin()],
+    plugins: [react(), createAccountsPlugin(), createSavedSubjectsPlugin(), createGradesProxyPlugin()],
 });
